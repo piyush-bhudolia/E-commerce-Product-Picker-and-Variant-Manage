@@ -1,191 +1,188 @@
-
-
 .product-list {
-    background-color: white;
-    padding: 20px; /* Adjust padding as needed */
-    height: 100vh; /* Full height */
-  }
-  
-  .title {
-    font-family: 'Roboto', sans-serif;; /* Make sure you import the font in index.html or use a font from Google Fonts */
-    font-size: 24px; /* Adjust size to match Figma */
-    font-weight: 500; /* Adjust weight */
-    line-height: 25px; /* Adjust line height */
-    margin-bottom: 20px; /* Space below the title */
-  }
-  
-  .columns {
-    display: flex;
-    justify-content: center; /* Center the columns horizontally */
-    width: 100%; /* Ensure full width */
-  }
-  
-  .column {
-    flex: 1; /* Allows columns to take equal space */
-    text-align: center; /* Align text to the left */
-    margin-right: 20px; 
-    max-width: 300px;
-  }
-  
-  .column:last-child {
-    margin-right: 0; /* Remove right margin from the last column */
-  }
-  
-  h3 {
-    font-family: 'Roboto', sans-serif; 
-    font-size: 14px; 
-    font-weight: 500;
-    line-height: 16px;
-    opacity: 1; 
+  background-color: white;
+  padding: 20px; /* Adjust padding as needed */
+  height: 100vh; /* Full height */
+}
+
+.title {
+  font-family: 'Roboto', sans-serif; /* Make sure you import the font in index.html or use a font from Google Fonts */
+  font-size: 24px; /* Adjust size to match Figma */
+  font-weight: 500; /* Adjust weight */
+  line-height: 25px; /* Adjust line height */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.columns {
+  display: flex;
+  justify-content: center; /* Center the columns horizontally */
+  width: 100%; /* Ensure full width */
+}
+
+.column {
+  flex: 1; /* Allows columns to take equal space */
+  text-align: center; /* Align text to the left */
+  margin-right: 20px;
+  max-width: 300px;
+}
+
+.column:last-child {
+  margin-right: 0; /* Remove right margin from the last column */
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  opacity: 1;
 }
 .product-row {
-    display: flex;
-    align-items: center; 
-    margin-bottom: 10px; 
-    width: 300px; 
-    height: 31px; 
-    background: #FFFFFF; 
-     
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 31px;
+  background: #ffffff;
 }
 
 .serial-number {
-    font-size: 14px; 
-    margin-right: 10px; 
+  font-size: 14px;
+  margin-right: 10px;
 }
 
 .product-info {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    width: 85%;
-    border: 1px solid rgba(0, 0, 0, 0.07); 
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
-    opacity: 1; 
-    padding: 5px; 
-    padding-right: 10px;
-    padding-block: 0;
-    border-radius: 4px;
-    width: 270px; 
-    height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  padding: 5px;
+  padding-right: 10px;
+  padding-block: 0;
+  border-radius: 4px;
+  width: 270px;
+  height: 31px;
 }
 
 .product-name {
-    margin-right: 10px; /* Space between name and edit button */
-    font-family: 'Roboto', sans-serif; /* Use Roboto font */
-    font-size: 14px; /* Adjust font size */
-    font-weight: 400; /* Adjust font weight */
-    line-height: 21px; /* Set line height */
-    text-align: left; /* Align text to the left */
-    color: #000; /* Optional: Set text color, adjust as needed */
+  margin-right: 10px; /* Space between name and edit button */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-size: 14px; /* Adjust font size */
+  font-weight: 400; /* Adjust font weight */
+  line-height: 21px; /* Set line height */
+  text-align: left; /* Align text to the left */
+  color: #000; /* Optional: Set text color, adjust as needed */
 }
 
 .edit-button {
-    width: 15.98px; /* Set width as per Figma */
-    height: 16px; /* Set height as per Figma */
-    background: none; /* No background */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor for clickable */
-    opacity: 1; /* Set opacity to 1 to make it visible */
+  width: 15.98px; /* Set width as per Figma */
+  height: 16px; /* Set height as per Figma */
+  background: none; /* No background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor for clickable */
+  opacity: 1; /* Set opacity to 1 to make it visible */
 }
 
 .discount-row {
-    display: flex;
-    align-items: center; 
-    justify-content: space-evenly;
-    width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px;
 }
 
-
-    .discount-input {
-        width: 69px;
-        height: 31px;
-        border: 1px solid #0000001A;
-        background: #FFFFFF;
-        opacity: 1;
-        font-family: 'Roboto', sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 21px;
-        padding: 5px;
-        box-sizing: border-box;
-        box-shadow: 0px 2px 4px 0px #0000001A;
-    }
-    
-
+.discount-input {
+  width: 69px;
+  height: 31px;
+  border: 1px solid #0000001a;
+  background: #ffffff;
+  opacity: 1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px 0px #0000001a;
+}
 
 .discount-type {
-    width: 95px;
-    height: 31px;
-    border: 1px solid #0000001A;
-    background: #FFFFFF;
-    opacity: 1;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    padding: 5px;
-    box-sizing: border-box;
-    box-shadow: 0px 2px 4px 0px #0000001A;
+  width: 95px;
+  height: 31px;
+  border: 1px solid #0000001a;
+  background: #ffffff;
+  opacity: 1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px 0px #0000001a;
 }
 
 .delete-button {
-    background: none; 
-    border: none; 
-    
-    font-size: 16px; /* Adjust size */
-    width: 13px;
-    height: 13px;
-    color: #00000066;
-    opacity: 1;
-    cursor: pointer;
+  background: none;
+  border: none;
+
+  font-size: 16px; /* Adjust size */
+  width: 13px;
+  height: 13px;
+  color: #00000066;
+  opacity: 1;
+  cursor: pointer;
 }
 .delete-button:hover {
-    color: red; /* Change background color to red on hover */
+  color: red; /* Change background color to red on hover */
 }
-
 
 .add-product-button {
-    width: 193px;
-    height: 48px;
-    margin: 20px auto; /* Center the button horizontally */
-    background-color: white; /* Background color */
-    color: #008060; /* Text color */
-    border: 2px solid #008060; /* Border color */
-    border-radius: 4px 0px 0px 0px; /* Border-radius as per the design */
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    display: block; /* Centering with margin auto */
-    line-height: 48px; /* Align the text vertically */
-    /* margin-right: 100px; */
+  width: 193px;
+  height: 48px;
+  margin: 20px auto; /* Center the button horizontally */
+  background-color: white; /* Background color */
+  color: #008060; /* Text color */
+  border: 2px solid #008060; /* Border color */
+  border-radius: 4px 0px 0px 0px; /* Border-radius as per the design */
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  display: block; /* Centering with margin auto */
+  line-height: 48px; /* Align the text vertically */
+  /* margin-right: 100px; */
 }
 .add-product-button:hover {
-    background-color: #008060; /* Background changes to green on hover */
-    color: white; /* Text color becomes white on hover */
+  background-color: #008060; /* Background changes to green on hover */
+  color: white; /* Text color becomes white on hover */
 }
 .variant-row {
-    margin-left: 30px; /* Slight indentation to show it's a variant */
-    font-size: 0.9em;  /* Smaller size for variant rows */
-  }
-  
-  .show-variants-container {
-    margin-left: 30px;
-  }
-  
-  .show-variants {
-    background: none;
-    border: none;
-    color: blue;
-    cursor: pointer;
-    text-decoration: underline;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-  .show-variants:hover {
-    color: darkblue;
-  }
-  
-  /* Modal styling */
+  margin-left: 30px; /* Slight indentation to show it's a variant */
+  font-size: 0.9em; /* Smaller size for variant rows */
+}
+
+.show-variants-container {
+  margin-left: 30px;
+}
+
+.show-variants {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.show-variants:hover {
+  color: darkblue;
+}
+
+/* Modal styling */
+
+.product-variant {
+  padding-left: 16px;
+}

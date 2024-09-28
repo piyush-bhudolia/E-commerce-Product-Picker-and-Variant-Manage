@@ -1,628 +1,611 @@
 [
-    {
-        "id": 77,
-        "title": "Fog Linen Chambray Towel - Beige Stripe",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 77,
-                "title": "XS / Silver",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 77,
-                "title": "S / Silver",
-                "price": "49"
-            },
-            {
-                "id": 3,
-                "product_id": 77,
-                "title": "M / Silver",
-                "price": "49"
-            }
-        ],
-        "image": {
-            "id": 266,
-            "product_id": 77,
-            "src": "https://cdn11.bigcommerce.com/s-p1xcugzp89/products/77/images/266/foglinenbeigestripetowel1b.1647248662.386.513.jpg?c=1"
-        }
-    },
-    {
-        "id": 80,
-        "title": "Orbit Terrarium - Large",
-        "variants": [
-            {
-                "id": 64,
-                "product_id": 80,
-                "title": "Default Title",
-                "price": "109"
-            }
-        ],
-        "image": {
-            "id": 272,
-            "product_id": 80,
-            "src": "https://cdn11.bigcommerce.com/s-p1xcugzp89/products/80/images/272/roundterrariumlarge.1647248662.386.513.jpg?c=1"
-        }
-    },
-    {
-        "id": 78,
-        "title": "Sample Product 78",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 78,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 78,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 78,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 267,
-            "product_id": 78,
-            "src": "https://example.com/images/sampleproduct78.jpg"
-        }
-    },
-    {
-        "id": 79,
-        "title": "Sample Product 79",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 79,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 79,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 79,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 268,
-            "product_id": 79,
-            "src": "https://example.com/images/sampleproduct79.jpg"
-        }
-    },
-    {
-        "id": 80,
-        "title": "Sample Product 80",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 80,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 80,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 80,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 269,
-            "product_id": 80,
-            "src": "https://example.com/images/sampleproduct80.jpg"
-        }
-    },
-    {
-        "id": 81,
-        "title": "Sample Product 81",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 81,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 81,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 81,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 270,
-            "product_id": 81,
-            "src": "https://example.com/images/sampleproduct81.jpg"
-        }
-    },
-    {
-        "id": 82,
-        "title": "Sample Product 82",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 82,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 82,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 82,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 271,
-            "product_id": 82,
-            "src": "https://example.com/images/sampleproduct82.jpg"
-        }
-    },
-    {
-        "id": 83,
-        "title": "Sample Product 83",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 83,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 83,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 83,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 272,
-            "product_id": 83,
-            "src": "https://example.com/images/sampleproduct83.jpg"
-        }
-    },
-    {
-        "id": 84,
-        "title": "Sample Product 84",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 84,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 84,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 84,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 273,
-            "product_id": 84,
-            "src": "https://example.com/images/sampleproduct84.jpg"
-        }
-    },
-    {
-        "id": 85,
-        "title": "Sample Product 85",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 85,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 85,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 85,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 274,
-            "product_id": 85,
-            "src": "https://example.com/images/sampleproduct85.jpg"
-        }
-    },
-    {
-        "id": 86,
-        "title": "Sample Product 86",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 86,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 86,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 86,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 275,
-            "product_id": 86,
-            "src": "https://example.com/images/sampleproduct86.jpg"
-        }
-    },
-    {
-        "id": 87,
-        "title": "Sample Product 87",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 87,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 87,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 87,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 276,
-            "product_id": 87,
-            "src": "https://example.com/images/sampleproduct87.jpg"
-        }
-    },
-    {
-        "id": 88,
-        "title": "Sample Product 88",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 88,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 88,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 88,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 277,
-            "product_id": 88,
-            "src": "https://example.com/images/sampleproduct88.jpg"
-        }
-    },
-    {
-        "id": 89,
-        "title": "Sample Product 89",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 89,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 89,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 89,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 278,
-            "product_id": 89,
-            "src": "https://example.com/images/sampleproduct89.jpg"
-        }
-    },
-    {
-        "id": 90,
-        "title": "Sample Product 90",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 90,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 90,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 90,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 279,
-            "product_id": 90,
-            "src": "https://example.com/images/sampleproduct90.jpg"
-        }
-    },
-    {
-        "id": 91,
-        "title": "Sample Product 91",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 91,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 91,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 91,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 280,
-            "product_id": 91,
-            "src": "https://example.com/images/sampleproduct91.jpg"
-        }
-    },
-    {
-        "id": 92,
-        "title": "Sample Product 92",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 92,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 92,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 92,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 281,
-            "product_id": 92,
-            "src": "https://example.com/images/sampleproduct92.jpg"
-        }
-    },
-    {
-        "id": 93,
-        "title": "Sample Product 93",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 93,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 93,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 93,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 282,
-            "product_id": 93,
-            "src": "https://example.com/images/sampleproduct93.jpg"
-        }
-    },
-    {
-        "id": 94,
-        "title": "Sample Product 94",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 94,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 94,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 94,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 283,
-            "product_id": 94,
-            "src": "https://example.com/images/sampleproduct94.jpg"
-        }
-    },
-    {
-        "id": 95,
-        "title": "Sample Product 95",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 95,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 95,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 95,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 284,
-            "product_id": 95,
-            "src": "https://example.com/images/sampleproduct95.jpg"
-        }
-    },
-    {
-        "id": 96,
-        "title": "Sample Product 96",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 96,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 96,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 96,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 285,
-            "product_id": 96,
-            "src": "https://example.com/images/sampleproduct96.jpg"
-        }
-    },
-    {
-        "id": 97,
-        "title": "Sample Product 97",
-        "variants": [
-            {
-                "id": 1,
-                "product_id": 97,
-                "title": "Variant 1 / Color 1",
-                "price": "49"
-            },
-            {
-                "id": 2,
-                "product_id": 97,
-                "title": "Variant 2 / Color 2",
-                "price": "59"
-            },
-            {
-                "id": 3,
-                "product_id": 97,
-                "title": "Variant 3 / Color 3",
-                "price": "69"
-            }
-        ],
-        "image": {
-            "id": 286,
-            "product_id": 97,
-            "src": "https://example.com/images/sampleproduct97.jpg"
-        }
+  {
+    "id": 77,
+    "title": "Fog Linen Chambray Towel - Beige Stripe",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 77,
+        "title": "XS / Silver",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 77,
+        "title": "S / Silver",
+        "price": "49"
+      },
+      {
+        "id": 3,
+        "product_id": 77,
+        "title": "M / Silver",
+        "price": "49"
+      }
+    ],
+    "image": {
+      "id": 266,
+      "product_id": 77,
+      "src": "https://cdn11.bigcommerce.com/s-p1xcugzp89/products/77/images/266/foglinenbeigestripetowel1b.1647248662.386.513.jpg?c=1"
     }
+  },
+  {
+    "id": 78,
+    "title": "Sample Product 78",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 78,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 78,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 78,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 267,
+      "product_id": 78,
+      "src": "https://example.com/images/sampleproduct78.jpg"
+    }
+  },
+  {
+    "id": 79,
+    "title": "Sample Product 79",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 79,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 79,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 79,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 268,
+      "product_id": 79,
+      "src": "https://example.com/images/sampleproduct79.jpg"
+    }
+  },
+  {
+    "id": 80,
+    "title": "Sample Product 80",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 80,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 80,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 80,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 269,
+      "product_id": 80,
+      "src": "https://example.com/images/sampleproduct80.jpg"
+    }
+  },
+  {
+    "id": 81,
+    "title": "Sample Product 81",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 81,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 81,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 81,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 270,
+      "product_id": 81,
+      "src": "https://example.com/images/sampleproduct81.jpg"
+    }
+  },
+  {
+    "id": 82,
+    "title": "Sample Product 82",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 82,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 82,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 82,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 271,
+      "product_id": 82,
+      "src": "https://example.com/images/sampleproduct82.jpg"
+    }
+  },
+  {
+    "id": 83,
+    "title": "Sample Product 83",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 83,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 83,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 83,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 272,
+      "product_id": 83,
+      "src": "https://example.com/images/sampleproduct83.jpg"
+    }
+  },
+  {
+    "id": 84,
+    "title": "Sample Product 84",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 84,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 84,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 84,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 273,
+      "product_id": 84,
+      "src": "https://example.com/images/sampleproduct84.jpg"
+    }
+  },
+  {
+    "id": 85,
+    "title": "Sample Product 85",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 85,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 85,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 85,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 274,
+      "product_id": 85,
+      "src": "https://example.com/images/sampleproduct85.jpg"
+    }
+  },
+  {
+    "id": 86,
+    "title": "Sample Product 86",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 86,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 86,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 86,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 275,
+      "product_id": 86,
+      "src": "https://example.com/images/sampleproduct86.jpg"
+    }
+  },
+  {
+    "id": 87,
+    "title": "Sample Product 87",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 87,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 87,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 87,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 276,
+      "product_id": 87,
+      "src": "https://example.com/images/sampleproduct87.jpg"
+    }
+  },
+  {
+    "id": 88,
+    "title": "Sample Product 88",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 88,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 88,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 88,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 277,
+      "product_id": 88,
+      "src": "https://example.com/images/sampleproduct88.jpg"
+    }
+  },
+  {
+    "id": 89,
+    "title": "Sample Product 89",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 89,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 89,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 89,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 278,
+      "product_id": 89,
+      "src": "https://example.com/images/sampleproduct89.jpg"
+    }
+  },
+  {
+    "id": 90,
+    "title": "Sample Product 90",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 90,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 90,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 90,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 279,
+      "product_id": 90,
+      "src": "https://example.com/images/sampleproduct90.jpg"
+    }
+  },
+  {
+    "id": 91,
+    "title": "Sample Product 91",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 91,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 91,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 91,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 280,
+      "product_id": 91,
+      "src": "https://example.com/images/sampleproduct91.jpg"
+    }
+  },
+  {
+    "id": 92,
+    "title": "Sample Product 92",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 92,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 92,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 92,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 281,
+      "product_id": 92,
+      "src": "https://example.com/images/sampleproduct92.jpg"
+    }
+  },
+  {
+    "id": 93,
+    "title": "Sample Product 93",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 93,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 93,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 93,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 282,
+      "product_id": 93,
+      "src": "https://example.com/images/sampleproduct93.jpg"
+    }
+  },
+  {
+    "id": 94,
+    "title": "Sample Product 94",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 94,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 94,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 94,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 283,
+      "product_id": 94,
+      "src": "https://example.com/images/sampleproduct94.jpg"
+    }
+  },
+  {
+    "id": 95,
+    "title": "Sample Product 95",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 95,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 95,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 95,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 284,
+      "product_id": 95,
+      "src": "https://example.com/images/sampleproduct95.jpg"
+    }
+  },
+  {
+    "id": 96,
+    "title": "Sample Product 96",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 96,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 96,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 96,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 285,
+      "product_id": 96,
+      "src": "https://example.com/images/sampleproduct96.jpg"
+    }
+  },
+  {
+    "id": 97,
+    "title": "Sample Product 97",
+    "variants": [
+      {
+        "id": 1,
+        "product_id": 97,
+        "title": "Variant 1 / Color 1",
+        "price": "49"
+      },
+      {
+        "id": 2,
+        "product_id": 97,
+        "title": "Variant 2 / Color 2",
+        "price": "59"
+      },
+      {
+        "id": 3,
+        "product_id": 97,
+        "title": "Variant 3 / Color 3",
+        "price": "69"
+      }
+    ],
+    "image": {
+      "id": 286,
+      "product_id": 97,
+      "src": "https://example.com/images/sampleproduct97.jpg"
+    }
+  }
 ]
