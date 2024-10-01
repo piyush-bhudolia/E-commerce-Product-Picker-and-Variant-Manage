@@ -16,6 +16,7 @@
   display: flex;
   justify-content: center; /* Center the columns horizontally */
   width: 100%; /* Ensure full width */
+  margin-bottom: 5px;
 }
 
 .column {
@@ -140,31 +141,31 @@ h3 {
 .add-product-button {
   width: 193px;
   height: 48px;
-  margin: 20px auto; /* Center the button horizontally */
-  background-color: white; /* Background color */
-  color: #008060; /* Text color */
-  border: 2px solid #008060; /* Border color */
-  border-radius: 4px 0px 0px 0px; /* Border-radius as per the design */
+  margin: 20px auto; 
+  background-color: white; 
+  color: #008060; 
+  border: 2px solid #008060; 
+  border-radius: 4px; 
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: center;
-  display: block; /* Centering with margin auto */
-  line-height: 48px; /* Align the text vertically */
-  /* margin-right: 100px; */
+  display: block; 
+  line-height: 48px; 
 }
+ 
 .add-product-button:hover {
-  background-color: #008060; /* Background changes to green on hover */
-  color: white; /* Text color becomes white on hover */
+  background-color: #008060; 
+  color: white; 
 }
 .variant-row {
-  margin-left: 30px; /* Slight indentation to show it's a variant */
-  font-size: 0.9em; /* Smaller size for variant rows */
+ 
+  font-size: 0.9em; 
 }
 
 .show-variants-container {
-  margin-left: 30px;
+  margin-left: 60px;
 }
 
 .show-variants {
@@ -174,7 +175,8 @@ h3 {
   cursor: pointer;
   text-decoration: underline;
   font-size: 14px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+  padding-block: 10px;
 }
 
 .show-variants:hover {
@@ -203,16 +205,16 @@ h3 {
 }
 
 .product-container .product-row {
-  display: flex; /* Use flexbox for aligning items in a row */
-  align-items: center; /* Center align items vertically */
+  display: flex; 
+  align-items: center; 
   margin-bottom: 10px;
   width: 100vw;
   padding-bottom: 10px;
   border-bottom: 1px solid #e0e0e0;
 }
 .product-container .product-row img{
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 4px;
   margin-left: 15px;
 }
@@ -225,17 +227,20 @@ h3 {
   line-height: 24px;
 }
 
-.variants-container {
-  
+.product-picker-content .variants-container {
 }
+  
+  
 
 .product-container .variant-row {
-  display: flex; /* Use flexbox for aligning items in a row */
-  align-items: center; /* Center align items vertically */
-  margin-bottom: 5px; /* Space between variant rows */
+  display: flex; 
+  align-items: center; 
+  /* margin-bottom: 5px;  */
   border-bottom: 1px solid #e0e0e0;
   width: 100vw;
   gap: 10px;
+  padding-left: 35px;
+  padding-bottom: 3px;
 }
 
 .variant-title {
@@ -320,4 +325,12 @@ input[type='checkbox']:checked::after {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+}
+.variant-row .product-row{
+  max-width: 240px;
+}
+.variant-row .column-flex{
+  display: flex;
+  justify-content: flex-end;
+  
 }
