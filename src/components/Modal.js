@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Modal.css';
 import { FaSearch } from 'react-icons/fa';
-import ProductSelection from './ProductSelection';
 
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal = ({ isOpen, onClose, children, onSearch }) => {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   if (!isOpen) {
     return null;
@@ -22,6 +22,12 @@ const Modal = ({ isOpen, onClose, children }) => {
 
   const handleSearchContainerBlur = () => {
     setIsSearchFocused(false);
+  };
+
+  const handleSearchChange = (e) => {
+    const newSearchTerm = e.target.value;
+    setSearchTerm(newSearchTerm);
+    onSearch(newSearchTerm);
   };
 
   return (
@@ -42,11 +48,14 @@ const Modal = ({ isOpen, onClose, children }) => {
           <button className="search-button">
             <FaSearch />
           </button>
-          <input type="text" className="search-input" placeholder="Search for a product..." />
+          <input 
+            type="text" 
+            className="search-input" 
+            placeholder="Search for a product..." 
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
         </div>
-
-        
-        
         
         {children}
       </div>

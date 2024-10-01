@@ -19,6 +19,7 @@
   position: relative;
   padding: 10px;
   overflow: scroll;
+  overflow-y: hidden;
 }
 
 .header {
@@ -62,9 +63,10 @@
 }
 
 .search-container.focused {
-  border-color: #121313;
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  border-color: #008060;
+  box-shadow: 0 0 0 0.5px rgba(0, 128, 96, 1);
 }
+
 
 .search-input {
   flex: 1;
