@@ -1,20 +1,22 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Modal from "./Modal";
 import "./ProductList.css";
-
+ 
 const API_KEY = "72njgfa948d9aS7gs5";
 const PRODUCTS_PER_PAGE = 10;
-
+ 
 const ProductList = () => {
-  const [products, setProducts] = useState([{
-    id: 1,
-    name: '',
-    discount: '',
-    type: 'percentage', 
-    variants: [],
-    showVariants: false,
-  }]);
-
+  const [products, setProducts] = useState([
+    {
+      id: 1,
+      name: "",
+      discount: "",
+      type: "percentage",
+      variants: [],
+      showVariants: false,
+    },
+  ]);
+ 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentProductIndex, setCurrentProductIndex] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
@@ -25,38 +27,40 @@ const ProductList = () => {
   const [hasMore, setHasMore] = useState(true);
   const [error, setError] = useState(null);
   const loadingRef = useRef(false);
-
+ 
   useEffect(() => {
     if (isModalOpen) {
       setApiProducts([]);
-      setPage(0);
+      setPage(1);
       setHasMore(true);
       setError(null);
       loadingRef.current = false;
-      fetchProducts(0);
+      fetchProducts(1);
     }
   }, [isModalOpen, searchTerm]);
-
+ 
   const fetchProducts = async (newPage) => {
     if (loadingRef.current || !hasMore) return;
     loadingRef.current = true;
     setIsLoading(true);
-
+ 
     try {
-      const url = `/task/products/search?search=${encodeURIComponent(searchTerm)}&page=${newPage}&limit=${PRODUCTS_PER_PAGE}`;
+      const url = `/task/products/search?search=${encodeURIComponent(
+        searchTerm
+      )}&page=${newPage}&limit=${PRODUCTS_PER_PAGE}`;
       console.log(`Fetching products: ${url}`);
-
+ 
       const response = await fetch(url, {
         headers: { "x-api-key": API_KEY },
       });
-
+ 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-
+ 
       const data = await response.json();
-      console.log("API response:", data);
-
+      console.log(`fetched length : ${data.length}`);
+ 
       if (data.length === 0) {
         setHasMore(false);
       } else {
@@ -65,13 +69,13 @@ const ProductList = () => {
       }
     } catch (error) {
       console.error("Error fetching products:", error);
-      setError(`Failed to fetch products: ${error.message}`);
+      setError(`Failed to fetch products, please enter new keyword !`);
     } finally {
       setIsLoading(false);
       loadingRef.current = false;
     }
   };
-
+ 
   const handleScroll = useCallback(
     (e) => {
       const { scrollTop, clientHeight, scrollHeight } = e.target;
@@ -80,12 +84,13 @@ const ProductList = () => {
         !loadingRef.current &&
         hasMore
       ) {
+        console.log(`Fetching page ${page}`);
         fetchProducts(page);
       }
     },
     [page, hasMore]
   );
-
+ 
   const addProduct = () => {
     const newProduct = {
       id: products.length + 1,
@@ -97,23 +102,35 @@ const ProductList = () => {
     };
     setProducts([...products, newProduct]);
   };
-
+ 
   const toggleVariants = (index) => {
     const updatedProducts = [...products];
     updatedProducts[index].showVariants = !updatedProducts[index].showVariants;
     setProducts(updatedProducts);
   };
-
-  const deleteProduct = (id) => {
-    if(products.length > 1){
-      setProducts(products.filter((product) => product.id !== id));
+ 
+  const deleteProduct = (id, productIndex) => {
+    if (products.length > 1) {
+      setProducts(products.filter((product, index) => index !== productIndex));
     }
   };
-
+  const deleteVariant = (productIndex, variantIndex) => {
+    const updatedProducts = [...products];
+    
+    
+    if (updatedProducts[productIndex].variants.length > 1) {
+      updatedProducts[productIndex].variants = updatedProducts[productIndex].variants.filter(
+        (variant, index) => index !== variantIndex
+      );
+      
+      setProducts(updatedProducts);
+    }
+  };
+ 
   const handleDragStart = (e, index) => {
     e.dataTransfer.setData("text/plain", index);
   };
-
+ 
   const handleDrop = (e, dropIndex) => {
     const dragIndex = parseInt(e.dataTransfer.getData("text/plain"), 10);
     const updatedProducts = [...products];
@@ -121,32 +138,43 @@ const ProductList = () => {
     updatedProducts.splice(dropIndex, 0, removed);
     setProducts(updatedProducts);
   };
-
+ 
   const handleDragOver = (e) => {
     e.preventDefault();
   };
-
+ 
   const handleVariantDragStart = (e, productIndex, variantIndex) => {
-    e.dataTransfer.setData("text/plain", JSON.stringify({ productIndex, variantIndex }));
+    e.dataTransfer.setData(
+      "text/plain",
+      JSON.stringify({ productIndex, variantIndex })
+    );
   };
-
+ 
   const handleVariantDrop = (e, productIndex, dropVariantIndex) => {
     e.preventDefault();
-    const { productIndex: dragProductIndex, variantIndex: dragVariantIndex } = JSON.parse(e.dataTransfer.getData("text/plain"));
-
+    const { productIndex: dragProductIndex, variantIndex: dragVariantIndex } =
+      JSON.parse(e.dataTransfer.getData("text/plain"));
+ 
     if (productIndex !== dragProductIndex) return; // Ensure variants are only moved within the same product
-
+ 
     const updatedProducts = [...products];
-    const [removedVariant] = updatedProducts[productIndex].variants.splice(dragVariantIndex, 1);
-    updatedProducts[productIndex].variants.splice(dropVariantIndex, 0, removedVariant);
-
+    const [removedVariant] = updatedProducts[productIndex].variants.splice(
+      dragVariantIndex,
+      1
+    );
+    updatedProducts[productIndex].variants.splice(
+      dropVariantIndex,
+      0,
+      removedVariant
+    );
+ 
     setProducts(updatedProducts);
   };
-
+ 
   const handleVariantDragOver = (e) => {
     e.preventDefault();
   };
-
+ 
   const openProductPicker = (index) => {
     setCurrentProductIndex(index);
     setIsModalOpen(true);
@@ -157,11 +185,11 @@ const ProductList = () => {
     setError(null);
     loadingRef.current = false;
   };
-
+ 
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
+ 
   const handleSearch = (term) => {
     setSearchTerm(term);
     setApiProducts([]);
@@ -169,9 +197,10 @@ const ProductList = () => {
     setHasMore(true);
     loadingRef.current = false;
   };
-
+ 
   const handleProductSelection = (product) => {
-    const isProductSelected = selectedProducts[product.id]?.allSelected || false;
+    const isProductSelected =
+      selectedProducts[product.id]?.allSelected || false;
     setSelectedProducts((prev) => ({
       ...prev,
       [product.id]: {
@@ -186,9 +215,10 @@ const ProductList = () => {
       },
     }));
   };
-
+ 
   const handleVariantSelection = (productId, variantId) => {
-    const isVariantSelected = selectedProducts[productId]?.variants[variantId] || false;
+    const isVariantSelected =
+      selectedProducts[productId]?.variants[variantId] || false;
     const updatedVariants = {
       ...selectedProducts[productId]?.variants,
       [variantId]: !isVariantSelected,
@@ -205,15 +235,15 @@ const ProductList = () => {
       },
     }));
   };
-
+ 
   const isProductSelected = (productId) => {
     return selectedProducts[productId]?.allSelected || false;
   };
-
+ 
   const isVariantSelected = (productId, variantId) => {
     return selectedProducts[productId]?.variants[variantId] || false;
   };
-
+ 
   const handleAddSelectedProducts = () => {
     const selectedProductsArray = apiProducts
       .filter((prod) => selectedProducts[prod.id] !== undefined)
@@ -226,7 +256,7 @@ const ProductList = () => {
           console.log(p.id);
           return productVariantsIdsSelected.includes(`${p.id}`);
         });
-
+ 
         return {
           id: product.id,
           name: product?.title,
@@ -236,18 +266,62 @@ const ProductList = () => {
           showVariants: productVariantsSelected.length > 0,
         };
       });
-
+ 
     const updatedProducts = [
       ...products.slice(0, currentProductIndex),
       ...selectedProductsArray,
       ...products.slice(currentProductIndex + 1),
     ];
-
+ 
     setProducts(updatedProducts);
     setIsModalOpen(false);
     setSelectedProducts({});
   };
-
+  
+  const validateDiscount = (discountValue, type, isVariant = false) => {
+    if (type === "flat") {
+      // Allow only positive integers for "Flat"
+      return /^\d+$/.test(discountValue) || discountValue === "";
+    } else if (type === "percentage") {
+      // Allow values between 1 and 100 for "% Off"
+      const numericValue = parseInt(discountValue, 10);
+      return (!isNaN(numericValue) && numericValue >= 1 && numericValue <= 100) || discountValue === "";
+    }
+    return false;
+  };
+  
+  const handleDiscountChange = (discountValue, index, type, isVariant = false) => {
+    const updatedProducts = [...products];
+  
+    if (isVariant) {
+      const variant = updatedProducts[index.productIndex].variants[index.variantIndex];
+      if (validateDiscount(discountValue, variant.type, true)) {
+        updatedProducts[index.productIndex].variants[index.variantIndex].discount = discountValue;
+        setProducts(updatedProducts);
+      } else {
+        alertForInvalidDiscount(discountValue, variant.type);
+      }
+    } else {
+      const product = updatedProducts[index];
+      if (validateDiscount(discountValue, product.type)) {
+        updatedProducts[index].discount = discountValue;
+        setProducts(updatedProducts);
+      } else {
+        alertForInvalidDiscount(discountValue, product.type);
+      }
+    }
+  };
+  
+  const alertForInvalidDiscount = (discountValue, type) => {
+    if (type === "flat") {
+      alert("Please enter a valid positive number for Flat discount.");
+    } else if (type === "percentage") {
+      alert("Please enter a number between 1 and 100 for % Off.");
+    }
+  };
+  
+  
+ 
   return (
     <div className="product-list">
       <h1 className="title">Add Products</h1>
@@ -259,9 +333,9 @@ const ProductList = () => {
           <h3>Discount</h3>
         </div>
       </div>
-
+ 
       {products.map((product, productIndex) => (
-        <div key={product.id}>
+        <div key={productIndex}>
           <div
             className="columns"
             draggable
@@ -293,8 +367,10 @@ const ProductList = () => {
                   placeholder="Discount"
                   value={product.discount}
                   onChange={(e) => {
+                    const discountValue = e.target.value;
+                    handleDiscountChange(discountValue, productIndex,product.type);
                     const updatedProducts = [...products];
-                    updatedProducts[productIndex].discount = e.target.value;
+                    updatedProducts[productIndex].discount = discountValue;
                     setProducts(updatedProducts);
                   }}
                 />
@@ -310,12 +386,14 @@ const ProductList = () => {
                   <option value="percentage">% Off</option>
                   <option value="flat">Flat</option>
                 </select>
+                {products.length > 1 && (
                 <button
                   className="delete-button"
-                  onClick={() => deleteProduct(product.id)}
+                  onClick={() => deleteProduct(product.id, productIndex)}
                 >
                   X
                 </button>
+                )}
               </div>
               {product.variants.length > 1 && (
                 <div className="show-variants-container">
@@ -329,14 +407,16 @@ const ProductList = () => {
               )}
             </div>
           </div>
-
+ 
           {(product.variants.length === 1 || product.showVariants) &&
             product.variants.map((variant, variantIndex) => (
               <div
                 className="variant-row columns"
                 key={`${product.id}-${variantIndex}`}
                 draggable
-                onDragStart={(e) => handleVariantDragStart(e, productIndex, variantIndex)}
+                onDragStart={(e) =>
+                  handleVariantDragStart(e, productIndex, variantIndex)
+                }
                 onDrop={(e) => handleVariantDrop(e, productIndex, variantIndex)}
                 onDragOver={handleVariantDragOver}
               >
@@ -353,23 +433,35 @@ const ProductList = () => {
                       type="text"
                       className="discount-input"
                       placeholder="Discount"
+                      onChange={(e) => {
+                        const discountValue = e.target.value;
+                      }}
                     />
                     <select className="discount-type">
                       <option value="percentage">% Off</option>
                       <option value="flat">Flat</option>
                     </select>
-                    <button className="delete-button">X</button>
+                    {product.variants.length > 1 ? (
+                      <button
+                        className="delete-button"
+                        onClick={() => deleteVariant(productIndex, variantIndex)}
+                      >
+                        X
+                      </button>
+                    ) : (
+                      <span className="delete-button-placeholder"></span>
+                    )}
                   </div>
                 </div>
               </div>
             ))}
         </div>
       ))}
-
+ 
       <button className="add-product-button" onClick={addProduct}>
         Add Product
       </button>
-
+ 
       <Modal isOpen={isModalOpen} onClose={closeModal} onSearch={handleSearch}>
         <div className="product-picker-content" onScroll={handleScroll}>
           {error && <div className="error-message">{error}</div>}
@@ -388,13 +480,10 @@ const ProductList = () => {
                 )}
                 <span className="product-title">{product.title}</span>
               </div>
-
+ 
               <div className="variants-container">
-                {product.variants.map((variant) => (
-                  <div
-                    key={`${product.id}-${variant.id}`}
-                    className="variant-row"
-                  >
+                {product.variants.map((variant, index) => (
+                  <div key={`${product.id}-${index}`} className="variant-row">
                     <input
                       type="checkbox"
                       checked={isVariantSelected(product.id, variant.id)}
@@ -417,7 +506,7 @@ const ProductList = () => {
             <div className="no-more-products">No more products to load</div>
           )}
         </div>
-
+ 
         <div className="modal-footer">
           <div className="footer-left">
             {
@@ -440,5 +529,6 @@ const ProductList = () => {
     </div>
   );
 };
-
+ 
 export default ProductList;
+ 

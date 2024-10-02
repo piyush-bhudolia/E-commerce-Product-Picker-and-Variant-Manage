@@ -74,7 +74,7 @@
   border: none;
   font-size: 14px;
   background: transparent;
-  outline: none; /* Removes the default focus outline */
+  outline: none; 
 }
 
 .search-button {
@@ -85,7 +85,7 @@
   color: #010101fc;
 }
 
-/* Optional: style the search icon when container is focused */
+
 .search-container.focused .search-button {
   color: #121313;
 }
