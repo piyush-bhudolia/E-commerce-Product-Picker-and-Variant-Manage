@@ -188,6 +188,9 @@ h3 {
 .show-variants:hover {
   color: darkblue;
 }
+.show-variants svg{
+  font-size: 12px;
+}
 
 
 
