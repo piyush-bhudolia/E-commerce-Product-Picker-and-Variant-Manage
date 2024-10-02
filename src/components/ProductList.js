@@ -444,7 +444,7 @@ const ProductList = () => {
                       className="discount-input"
                       placeholder="Discount"
                       onChange={(e) => {
-                        const discountValue = e.target.value;
+                        console.log(e);
                       }}
                     />
                     <select className="discount-type">
