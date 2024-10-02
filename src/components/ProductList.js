@@ -72,7 +72,7 @@ const ProductList = () => {
       }
     } catch (error) {
       console.error("Error fetching products:", error);
-      setError(`Failed to fetch products, please enter new keyword !`);
+      setError(`No Product found, please enter new keyword !`);
     } finally {
       setIsLoading(false);
       loadingRef.current = false;
@@ -158,7 +158,7 @@ const ProductList = () => {
     const { productIndex: dragProductIndex, variantIndex: dragVariantIndex } =
       JSON.parse(e.dataTransfer.getData("text/plain"));
  
-    if (productIndex !== dragProductIndex) return; // Ensure variants are only moved within the same product
+    if (productIndex !== dragProductIndex) return; // Ensuring variants are only moved within the same product
  
     const updatedProducts = [...products];
     const [removedVariant] = updatedProducts[productIndex].variants.splice(
@@ -196,7 +196,7 @@ const ProductList = () => {
   const handleSearch = (term) => {
     setSearchTerm(term);
     setApiProducts([]);
-    setPage(0);
+    setPage(1);
     setHasMore(true);
     loadingRef.current = false;
   };
