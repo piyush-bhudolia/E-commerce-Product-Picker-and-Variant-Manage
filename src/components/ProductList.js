@@ -3,7 +3,6 @@ import Modal from "./Modal";
 import "./ProductList.css";
 import { SlArrowUp } from "react-icons/sl";
 import { SlArrowDown } from "react-icons/sl";
-import { FaArrowUp } from "react-icons/fa";
 
 const API_KEY = "72njgfa948d9aS7gs5";
 const PRODUCTS_PER_PAGE = 10;
@@ -46,7 +45,6 @@ const ProductList = () => {
     if (loadingRef.current || !hasMore) return;
     loadingRef.current = true;
     setIsLoading(true);
- 
     try {
       const url = `/task/products/search?search=${encodeURIComponent(
         searchTerm
