@@ -3,6 +3,7 @@ import Modal from "./Modal";
 import "./ProductList.css";
 import { SlArrowUp } from "react-icons/sl";
 import { SlArrowDown } from "react-icons/sl";
+import no_image from '../data/no_image.png';
 
 const API_KEY = "72njgfa948d9aS7gs5";
 const PRODUCTS_PER_PAGE = 10;
@@ -234,8 +235,9 @@ const ProductList = () => {
         allSelected: anyVariantSelected,
         variants: updatedVariants,
       },
-    }));
-  };
+    }));
+  };
+
  
   const isProductSelected = (productId) => {
     return selectedProducts[productId]?.allSelected || false;
@@ -245,39 +247,48 @@ const ProductList = () => {
     return selectedProducts[productId]?.variants[variantId] || false;
   };
  
-  const handleAddSelectedProducts = () => {
-    const selectedProductsArray = apiProducts
-      .filter((prod) => selectedProducts[prod.id] !== undefined)
-      .map((product) => {
-        const productVariants = product.variants || [];
-        const productVariantsIdsSelected = Object.keys(
-          selectedProducts[product.id].variants
-        );
-        const productVariantsSelected = productVariants.filter((p) => {
-          console.log(p.id);
-          return productVariantsIdsSelected.includes(`${p.id}`);
-        });
- 
-        return {
-          id: product.id,
-          name: product?.title,
-          discount: "",
-          type: "percentage",
-          variants: productVariantsSelected,
-          showVariants: productVariantsSelected.length > 0,
-        };
+  
+const handleAddSelectedProducts = () => {
+  console.log(selectedProducts);
+  const selectedProductsArray = apiProducts
+    .filter((prod) => selectedProducts[prod.id] !== undefined)
+    .map((product) => {
+      const productVariants = product.variants || [];
+      // const productVariantsIdsSelected =  Object.keys(
+      //   selectedProducts[product.id].variants
+      // );
+
+      const productVariantsIdsSelected = Object.entries(
+        selectedProducts[product.id].variants
+      )
+        .filter(([key, value]) => value)
+        .map(([key, value]) => key);
+
+      const productVariantsSelected = productVariants.filter((p) => {
+        return productVariantsIdsSelected.includes(`${p.id}`);
       });
- 
-    const updatedProducts = [
-      ...products.slice(0, currentProductIndex),
-      ...selectedProductsArray,
-      ...products.slice(currentProductIndex + 1),
-    ];
- 
-    setProducts(updatedProducts);
-    setIsModalOpen(false);
-    setSelectedProducts({});
-  };
+
+      return {
+        id: product.id,
+        name: product?.title,
+        discount: "",
+        type: "percentage",
+        variants: productVariantsSelected,
+        showVariants: productVariantsSelected.length > 0,
+      };
+    });
+
+  const updatedProducts = [
+    ...products.slice(0, currentProductIndex),
+    ...selectedProductsArray,
+    ...products.slice(currentProductIndex + 1),
+  ];
+
+  setProducts(updatedProducts);
+  setIsModalOpen(false);
+  setSelectedProducts({});
+};
+
   
   const validateDiscount = (discountValue, type, isVariant = false) => {
     if (type === "flat") {
@@ -486,7 +497,7 @@ const ProductList = () => {
                 {product.image && product.image.src ? (
                   <img src={product.image.src} alt={product.title} />
                 ) : (
-                  <div className="no-image">No Image</div>
+                  <div className="no-image"><img src = {no_image}/></div>
                 )}
                 <span className="product-title">{product.title}</span>
               </div>

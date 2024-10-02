@@ -218,7 +218,7 @@ h3 {
   align-items: center; 
   margin-bottom: 10px;
   width: 100vw;
-  padding-bottom: 10px;
+  padding-block: 6px;
   border-bottom: 1px solid #e0e0e0;
   gap: 10px;
 }
