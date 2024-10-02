@@ -46,7 +46,7 @@ const ProductList = () => {
     loadingRef.current = true;
     setIsLoading(true);
     try {
-      const url = `/task/products/search?search=${encodeURIComponent(
+      const url = `https://stageapi.monkcommerce.app/task/products/search?search=${encodeURIComponent(
         searchTerm
       )}&page=${newPage}&limit=${PRODUCTS_PER_PAGE}`;
       console.log(`Fetching products: ${url}`);
