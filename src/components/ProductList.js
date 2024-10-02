@@ -248,46 +248,69 @@ const ProductList = () => {
   };
  
   
-const handleAddSelectedProducts = () => {
-  console.log(selectedProducts);
-  const selectedProductsArray = apiProducts
-    .filter((prod) => selectedProducts[prod.id] !== undefined)
-    .map((product) => {
-      const productVariants = product.variants || [];
-      // const productVariantsIdsSelected =  Object.keys(
-      //   selectedProducts[product.id].variants
-      // );
-
-      const productVariantsIdsSelected = Object.entries(
-        selectedProducts[product.id].variants
-      )
-        .filter(([key, value]) => value)
-        .map(([key, value]) => key);
-
-      const productVariantsSelected = productVariants.filter((p) => {
-        return productVariantsIdsSelected.includes(`${p.id}`);
+  const handleAddSelectedProducts = () => {
+    console.log(selectedProducts);
+    const selectedProductsArray = apiProducts
+      .filter((prod) => {
+        // Check if the product has any selected variants
+        const selectedProduct = selectedProducts[prod.id];
+        const hasSelectedVariants = selectedProduct
+          ? Object.values(selectedProduct.variants).some((selected) => selected)
+          : false;
+  
+        // Only include the product if there are selected variants
+        return hasSelectedVariants;
+      })
+      .map((product) => {
+        const productVariants = product.variants || [];
+  
+        // Get selected variant IDs
+        const productVariantsIdsSelected = Object.entries(
+          selectedProducts[product.id].variants
+        )
+          .filter(([key, value]) => value) // Only include selected variants
+          .map(([key, value]) => key);
+  
+        // Filter the selected variants
+        const productVariantsSelected = productVariants.filter((p) => {
+          return productVariantsIdsSelected.includes(`${p.id}`);
+        });
+  
+        return {
+          id: product.id,
+          name: product?.title,
+          discount: "",
+          type: "percentage",
+          variants: productVariantsSelected,
+          showVariants: productVariantsSelected.length > 0,
+        };
       });
-
-      return {
-        id: product.id,
-        name: product?.title,
+  
+    const updatedProducts = [
+      ...products.slice(0, currentProductIndex),
+      ...selectedProductsArray,
+      ...products.slice(currentProductIndex + 1),
+    ];
+  
+    // If no products are selected, add a default product
+    if (updatedProducts.length === 0) {
+      const newProduct = {
+        id: 1,
+        name: "",
         discount: "",
         type: "percentage",
-        variants: productVariantsSelected,
-        showVariants: productVariantsSelected.length > 0,
+        variants: [],
+        showVariants: false,
       };
-    });
-
-  const updatedProducts = [
-    ...products.slice(0, currentProductIndex),
-    ...selectedProductsArray,
-    ...products.slice(currentProductIndex + 1),
-  ];
-
-  setProducts(updatedProducts);
-  setIsModalOpen(false);
-  setSelectedProducts({});
-};
+      updatedProducts.push(newProduct);
+    }
+  
+    setProducts(updatedProducts);
+    setIsModalOpen(false);
+    setSelectedProducts({});
+  };
+  
+  
 
   
   const validateDiscount = (discountValue, type, isVariant = false) => {
